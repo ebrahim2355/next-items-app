@@ -6,7 +6,7 @@ A modern **Next.js (App Router)** application that demonstrates public item brow
 
 ## 🔗 Live Demo
 
-Add your deployed URL here (e.g., Vercel)
+[Live Link](https://next-js-items-app.vercel.app)
 
 ---
 
