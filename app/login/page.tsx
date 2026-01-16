@@ -88,10 +88,11 @@ export default function LoginPage() {
 
                 {/* Google Login */}
                 <button
-                    onClick={handleGoogleLogin}
-                    disabled={loading}
+                    onClick={() => {
+                        toast("Google login UI only (not implemented)");
+                    }}
                     className="w-full border border-[var(--muted)]/50 rounded py-2
-                     hover:bg-[var(--muted)]/10 transition disabled:opacity-60"
+             hover:bg-[var(--muted)]/10 transition"
                 >
                     Continue with Google
                 </button>
