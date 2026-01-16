@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* -------------------------------
+   Base Theme Variables
+-------------------------------- */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand Colors (Light) */
+  --primary: #2563eb;
+  /* Blue */
+  --secondary: #16a34a;
+  /* Green */
+  --muted: #6b7280;
+  /* Gray */
+}
+
+/* -------------------------------
+   Dark Theme Override
+-------------------------------- */
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  /* Brand Colors (Dark) */
+  --primary: #60a5fa;
+  --secondary: #4ade80;
+  --muted: #9ca3af;
+}
+
+/* -------------------------------
+   System Preference Fallback
+-------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --primary: #60a5fa;
+    --secondary: #4ade80;
+    --muted: #9ca3af;
+  }
+}
+
+/* -------------------------------
+   Tailwind Theme Mapping
+-------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+}
+
+/* -------------------------------
+   Global Styles
+-------------------------------- */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
