@@ -1,3 +1,5 @@
+import LandingCTA from "./components/LandingCTA";
+
 export default function HomePage() {
   return (
     <main className="space-y-24">
@@ -116,12 +118,7 @@ export default function HomePage() {
         <p className="mt-4 text-[var(--muted)]">
           Login now and start managing your items.
         </p>
-        <a
-          href="/login"
-          className="inline-block mt-6 px-8 py-3 rounded bg-[var(--primary)] text-white hover:opacity-90 transition"
-        >
-          Login Now
-        </a>
+        <LandingCTA></LandingCTA>
       </section>
     </main>
   );
